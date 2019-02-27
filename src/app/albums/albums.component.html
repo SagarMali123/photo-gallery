@@ -1,0 +1,24 @@
+ 
+<!-- <div class="container"> -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">Albums Details</div>
+      <br/>
+      <button class="btn btn-success pull-right" (click)="goToUser()" style="margin-right: 10px;"><i class="glyphicon glyphicon-backward"></i></button>
+      <br/><br/>
+      <div class="panel-body">
+          <div class="row">
+              <div class="col-md-4" *ngFor="let list of filterAlbums">
+                <div class="panel panel-info" (click)="showPhotos(list.id)">
+                  <div class="panel-heading">Album ID: {{list.id}}</div>
+                  <div class="panel-body">
+                      <ul>
+                        <li>{{list.title}} </li>
+                        </ul>
+                      <button class="btn btn-danger btn-sm pull-right" (click)="showPhotos(list.id)">Show Photos</button>
+                  </div>
+              </div>
+            </div>    
+          </div>
+      </div>
+    </div>
+  <!-- </div> -->

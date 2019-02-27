@@ -1,0 +1,23 @@
+ 
+<!-- <div class="container"> -->
+    <div class="panel panel-primary">
+      
+      <div class="panel-heading">Photo Galary</div>
+      <br/>
+      <button class="btn btn-success pull-right" (click)="goToAlbums()" style="margin-right: 10px;"><i class="glyphicon glyphicon-backward"></i></button>
+    <br/>
+      <div class="panel-body">
+          <div class="row" style="margin:10px;">
+              <div class="col-md-4" *ngFor="let pics of filterphoto">
+                <div class="panel panel-info">
+                  <div class="panel-heading">Title:{{pics.id}}</div>
+                  <div class="panel-body">
+                    <h5>{{pics.title}}</h5>
+                    <img src={{pics.url}} class="col-md-12"/>
+                  </div><br/>
+              </div><br/>
+            </div>    
+          </div>
+      </div>
+    </div>
+  <!-- </div> -->

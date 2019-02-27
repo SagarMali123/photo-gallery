@@ -1,0 +1,62 @@
+ 
+<!-- <div class="container"> -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">User Details</div>
+      
+      <div class="panel-body">
+          <div class="row">
+              <div class="col-md-4" *ngFor="let empList of empList; index as i;">
+                <div class="panel panel-info" (click)="showAlbums(empList.id)">
+                  <div class="panel-heading">Name:{{empList.name}}</div>
+                  <div class="panel-body">
+                      <ul>
+                        <li><b>Index    :</b> {{i+1}} </li>
+                        <li><b>ID       :</b> {{empList.id}} </li>
+                        <li><b>Email    :</b> {{empList.email}}</li>
+                        <li><b>Phone    :</b> {{empList.phone}}</li>
+                        <li><b>Username :</b> {{empList.username}}</li>
+                        <li><b>Website  :</b> {{empList.website}}</li>
+                        <li><b>Company  :</b> {{empList.website}}</li>
+                        <li><b>Adress   :</b> {{empList.website}}</li>
+                      </ul>
+                      <div class="panel-group" id="accordion">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a>Company</a>
+                              </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse">
+                                <ul>
+                                    <li><b>name:</b>       : {{empList.company.name}}</li>
+                                    <li><b>bs</b>          : {{empList.company.bs}} </li>
+                                    <li><b>catchPhrase</b> : {{empList.company.catchPhrase}}</li>
+                                  </ul>
+                            </div>
+                          </div>
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Address</a>
+                              </h4>
+                            </div>
+                            <div id="collapse2" class="panel-collapse">
+                              <ul>
+                                <li><b>city :</b> {{empList.address.city}} </li>
+                                <li><b>geo :</b> {{empList.address.geo.lat}}, {{empList.address.geo.lng}}</li>
+                                <li><b>street :</b> {{empList.address.street}} </li>
+                                <li><b>suite :</b> {{empList.address.suite}} </li>
+                                <li><b>zipcode :</b> {{empList.address.zipcode}}</li>
+                                </ul>.
+                            </div>
+                          </div>
+                       
+                        </div> 
+                      <button class="btn btn-info btn-sm pull-right" (click)="showAlbums(empList.id)">Show Albums</button>
+                  </div>
+              </div>
+            </div>    
+          </div>
+      </div>
+    </div>
+  <!-- </div> -->
