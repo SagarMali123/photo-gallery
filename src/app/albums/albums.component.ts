@@ -18,9 +18,8 @@ export class AlbumsComponent implements OnInit {
 
   Id: string = this._activatedRoute.snapshot.params['id'];
 
-
   ngOnInit() {
-    
+
     this._GalleryServiceService.getAlbums()
 
     .subscribe(data => {
@@ -39,11 +38,11 @@ export class AlbumsComponent implements OnInit {
   }
 
   showPhotos = function(id) {
-    this._router.navigate(['/photos',id]);
+    let PrevID = this.Id;
+    this._router.navigate(['/photos',id, PrevID]);
   }
 
   goToUser(){
-    console.log("call");
     this._router.navigate(['/user']);
   }
 

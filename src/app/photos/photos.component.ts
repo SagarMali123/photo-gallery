@@ -13,7 +13,9 @@ export class PhotosComponent implements OnInit {
   PhotoList;
   filterphoto;
   photos;
+
   Id: string = this._activatedRoute.snapshot.params['id'];
+  prevId: string = this._activatedRoute.snapshot.params['prevId'];
 
   ngOnInit() {
     this._GalleryServiceService.getPhotos()
@@ -25,14 +27,14 @@ export class PhotosComponent implements OnInit {
       console.log(this.PhotoList);
 
       this.filterphoto = this.PhotoList.filter((data) => {
-            return(data.albumId==this.Id)
+            return(data.albumId == this.Id)
        }).slice(0,5);
+
     });
   }
 
   goToAlbums(){
-    console.log("call");
-    this._router.navigate(['/albums',this.Id]);
+    this._router.navigate(['/albums',this.prevId]);
   }
 
 }

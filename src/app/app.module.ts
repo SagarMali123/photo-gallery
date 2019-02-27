@@ -12,7 +12,7 @@ import { PhotosComponent } from './photos/photos.component';
 const appRoutes: Routes = [
   { path: 'user', component: UserComponent },
   { path: 'albums/:id', component: AlbumsComponent },
-  { path: 'photos/:id', component: PhotosComponent },
+  { path: 'photos/:id/:prevId', component: PhotosComponent },
   { path: '', redirectTo: '/user', pathMatch: 'full' }
 ];
 
